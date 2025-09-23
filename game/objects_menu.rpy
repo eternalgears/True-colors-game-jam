@@ -7,7 +7,7 @@ label objects_menu:
     default Clothes = False
     default Mirror = False
 
-    e "Use the buttons :3"
+    A "Use the buttons :3"
 
     if Clock and Picture and Hobby and Clothes and Mirror:
         jump decide
