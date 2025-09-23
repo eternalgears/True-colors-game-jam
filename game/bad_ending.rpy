@@ -1,1 +1,3 @@
-# text etxte etsaffudf a
+label bad_ending:
+    "Bad ending"
+    return
