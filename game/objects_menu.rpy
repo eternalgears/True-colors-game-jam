@@ -65,7 +65,7 @@ label objects_menu:
                 action Jump("mirror")        
 
 label decide:
-    e "You did it!"
+    A "You did it!"
     return
 
 label clock:
