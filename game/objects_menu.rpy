@@ -22,8 +22,8 @@ label objects_menu:
     screen object_selection:
         if not Clock:
             imagebutton:
-                xpos 0.5
-                ypos 0.2
+                xpos 0.09
+                ypos 0.25
                 xanchor 0.5
                 yanchor 0.5
                 idle "button_idle.png"
@@ -31,8 +31,8 @@ label objects_menu:
                 action Jump("clock")
         if not Picture:
             imagebutton:
-                xpos 0.5
-                ypos 0.3
+                xpos 0.65
+                ypos 0.35
                 xanchor 0.5
                 yanchor 0.5
                 idle "button_idle.png"
@@ -41,7 +41,7 @@ label objects_menu:
         if not Hobby:
             imagebutton:
                 xpos 0.5
-                ypos 0.4
+                ypos 0.7
                 xanchor 0.5
                 yanchor 0.5
                 idle "button_idle.png"
@@ -50,16 +50,16 @@ label objects_menu:
         if not Clothes:
             imagebutton:
                 xpos 0.5
-                ypos 0.5
+                ypos 0.45
                 xanchor 0.5
-                yanchor 0.5
+                yanchor 0.55
                 idle "button_idle.png"
                 hover "button_hover.png"
                 action Jump("clothes")
         if not Mirror:
             imagebutton:
-                xpos 0.5
-                ypos 0.6
+                xpos 0.21
+                ypos 0.47
                 xanchor 0.5
                 yanchor 0.5
                 idle "button_idle.png"
