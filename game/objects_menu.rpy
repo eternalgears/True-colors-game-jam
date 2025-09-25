@@ -71,6 +71,8 @@ label decide:
     if acceptance > repression:
         jump good_ending
     else:
+        "Bad ending"
+        return
         jump bad_ending
 
 label clock:

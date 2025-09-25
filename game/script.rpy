@@ -6,7 +6,7 @@
 # different define function. Like for example, define E = Character("Real Name")
 
 define A = Character("???")
-define B = Character("Darcy")
+define B = Character("???")
 
 # The game starts here.
 
@@ -30,7 +30,7 @@ label start:
 
     # vpunch is there to make the screen shake. It's there for a dramatic effect for when the MC wakes up.
 
-    scene bg bedroom
+    scene bg apartment
     with vpunch
 
     "Her eyes jolt open. {w}Stabilizing herself against a wall behind her with an arm, she observes her surroundings and marks them as unfamiliar to her." 
