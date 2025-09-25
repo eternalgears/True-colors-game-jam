@@ -6,6 +6,7 @@
 # different define function. Like for example, define E = Character("Real Name")
 
 define A = Character("???")
+define B = Character("Darcy")
 
 # The game starts here.
 
