@@ -5,8 +5,9 @@
 # Names can be changed later in the story. Possibly in the ending, change the character's name through a 
 # different define function. Like for example, define E = Character("Real Name")
 
-define A = Character("???")
-define B = Character("???")
+define A = Character("???", color = "#ffffff", ctc = "ctc", ctc_pause = "ctc", ctc_position = "nestled")
+define B = Character("???", image = "lili", color = "#cc0000", ctc = "ctc", ctc_pause = "ctc", ctc_position = "nestled")
+define narrator = Character(name=None, ctc = "ctc", ctc_pause = "ctc", ctc_position = "nestled")
 
 # The game starts here.
 
@@ -15,9 +16,42 @@ image color_effect = TranslateImage(Transform(WaveImage("images/color texture.pn
 
 # Default settings
 define slow_dissolve = Dissolve(1.0)
+define sprite_dissolve = Dissolve(0.3)
+define slow_fade = Fade(2.0, 0.0, 3.0, color='#fff')
 default preferences.text_cps = 40
 default preferences.fullscreen = False
 default preferences.skip_unseen = False
+define config.say_attribute_transition = sprite_dissolve
+
+# half size image
+transform half_size: 
+    zoom 0.5 
+
+# white screen
+image white = "#fff"
+
+# click to continue button
+image ctc:
+    "gui/ctc_button.png"
+    linear 0.75 alpha 1.0
+    linear 0.75 alpha 0.0
+    repeat
+
+label splashscreen:
+    scene white
+    with Pause(1)
+
+    play music "audio/White Noise.mp3" fadein 1.5 fadeout 0.5 volume 0.1
+
+    show text "{color=#000000}Made for the SGDA Fall '25 Game Jam.{/color}"
+    with dissolve
+    $ renpy.pause()
+    hide text with dissolve
+    with Pause(1)
+
+    stop music fadeout 1.0
+    
+    return
 
 label start:
 
@@ -36,7 +70,7 @@ label start:
     scene bg apartment
     with vpunch
 
-    play music "audio/In Game Song - Final.mp3"
+    play music "audio/In Game Song - Final.mp3" fadein 1.0 fadeout 0.5
 
     "Her eyes jolt open. {w}Stabilizing herself against a wall behind her with an arm, she observes her surroundings and marks them as unfamiliar to her." 
     

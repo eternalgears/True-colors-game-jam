@@ -25,6 +25,8 @@ label objects_menu:
                 yanchor 0.5
                 idle "button_idle.png"
                 hover "button_hover.png"
+                activate_sound "audio/clicked.mp3"
+                hover_sound "audio/hover.mp3"
                 action Jump("clock")
         if not Picture:
             imagebutton:
@@ -34,6 +36,8 @@ label objects_menu:
                 yanchor 0.5
                 idle "button_idle.png"
                 hover "button_hover.png"
+                activate_sound "audio/clicked.mp3"
+                hover_sound "audio/hover.mp3"
                 action Jump("picture")
         if not Hobby:
             imagebutton:
@@ -43,6 +47,8 @@ label objects_menu:
                 yanchor 0.5
                 idle "button_idle.png"
                 hover "button_hover.png"
+                activate_sound "audio/clicked.mp3"
+                hover_sound "audio/hover.mp3"
                 action Jump("hobby")
         if not Clothes:
             imagebutton:
@@ -52,6 +58,8 @@ label objects_menu:
                 yanchor 0.55
                 idle "button_idle.png"
                 hover "button_hover.png"
+                activate_sound "audio/clicked.mp3"
+                hover_sound "audio/hover.mp3"
                 action Jump("clothes")
         if not Mirror:
             imagebutton:
@@ -61,6 +69,8 @@ label objects_menu:
                 yanchor 0.5
                 idle "button_idle.png"
                 hover "button_hover.png"
+                activate_sound "audio/clicked.mp3"
+                hover_sound "audio/hover.mp3"
                 action Jump("mirror")        
 
 # evaluate points for good vs bad ending
@@ -68,8 +78,6 @@ label decide:
     if acceptance > repression:
         jump good_ending
     else:
-        "Bad ending"
-        return
         jump bad_ending
 
 label clock:

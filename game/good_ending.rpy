@@ -1,29 +1,55 @@
 label good_ending:
-    "Suddenly, she hears knocking at the door. A person, a real life living being, wants to visit her after all."
+    stop music
+
+    play sound "audio/knock.ogg" 
+
+    "Suddenly, she hears knocking at the door." 
+
+    scene bg door at half_size
+    with slow_dissolve
+
+    play music "audio/White Noise.mp3" fadein 1.5 fadeout 0.5 volume 0.1
+
+    "A person, a real life living being, wants to visit her after all."
+
     "Turning around, her hands hover over the doorknob, but an invisible barrier, her hesitation, prevents her from turning it for a moment."
+    
+    play sound "audio/knock.ogg" 
+
     "She stands still without opening it until her thoughts are interrupted by the knock again. Fear and curiousity conjure in her mind as to who or what lies on the other side."
+    
+    play sound "audio/keys jingle.wav"
+    queue sound "audio/doorcreak.wav"
+
     "Before she can open the door, she hears the jangle of keys and the door creaks open."
 
+    stop music 
+
+    scene bg apartment
+    with vpunch
+
     show lili happy
-    
-    #test test test
 
     B "{cps=50}Hey honey! I'm hoooome!!{/cps}"
 
+    play music "audio/In Game Song - Final.mp3" fadein 1.0 fadeout 0.5
+
     "She stands uncomfortably, confused as to who this person is and what they are doing here. The person has an apron, full of colorful stains and wrinkles draped around them."
+    
     "They give off a sort of weird awkwardness in their stance, like they do not belong in this pristine space."
+    
     "They smell like coffee and syrup, a sweet homey smell compared to this bedroom that is washed out with bleach."
+    
     "This stranger stares back at her with a sort of happy look a puppy would give seeing their owner come home."
 
     show lili concerned
+    with sprite_dissolve
 
     "Their face then flips to a concerned gape when that affection isn't reciprocated."
 
     A "Who are you?"
 
-    show lili suspicious
-
-    B "..."
+    B suspicious "..."
 
     "She was met with a deafening silence. Every confusion, memory, and her life since she supposedly came here was always met with silence."
     
@@ -34,10 +60,8 @@ label good_ending:
     "Silence again. Every nonresponse just tells her that the stranger knows something she doesn't."
     
     A "Do you know where we are?"
-    
-    show lili concerned
 
-    B "..."
+    B concerned "..."
 
     "This stranger continues to leave her remarks unanswered. Their expression shifts from concern to frightened to a deepening guilt."
     
@@ -48,87 +72,130 @@ label good_ending:
     B "..."
     
     "Her confusion tips over to frustration at a fundamental secret she is for certain the stranger knows."
+    
     "Finally, she begs the question at the looming locked gates of secrets that weighed on her mind the most."
     
-    A "Do you know who I am?!"
-    
-    show lili scared
+    A "Do you know who I am?!" with vpunch
 
-    B "..."
+    B scared "..."
     
+    play sound "audio/room noise.mp3" fadein 2.0
+
     "As they leave her questions unanswered, she grow frustrated. Sparks of that noise before she woke up begin to come back."
-    "She can feel it from within, the bubbling echoes of sounds in here and there. Her brain fizzles and fries."
-    "Multitudes of shapes, colors, lights, things start clouding her ebbing vision that shows the stranger."
-    "The sensation overwhelms her so much that she holds her head with her hands to try to ease herself from an extraordinary unknown."
+    
+    "{cps=45}She can feel it from within, the bubbling echoes of sounds in here and there. Her brain fizzles and fries.{/cps}"
+    
+    "{cps=50}Multitudes of shapes, colors, lights, things start clouding her ebbing vision that shows the stranger.{/cps}"
+    
+    "{cps=55}The sensation overwhelms her so much that she holds her head with her hands to try to ease herself from an extraordinary unknown.{/cps}"
 
     B "..."
     B "I'm sorry... I do know."
     
+    stop sound fadeout 2.0
+
     "Her mind steadys at the words."
     "Breathe in, and breathe out. Everything is okay. She will find out in due time."
     
-    B "I hate being like this!"
+    B concerned "I hate being like this!"
     B "I know what you said but you've really gone too far and you knew this would happen!"
     
     "She knew that this would happen? Whatever could they mean by this?"
     
     A "..."
-    
-    show lili concerned
 
     B "Do you really not remember anything?"
     
     A "I can't. Please, could you explain to me what is going on?" 
     
-    show lili default
+    show lili default 
+    with sprite_dissolve
 
-    "The stranger moves to the kitchen, opening a drawer that shines brightly once opened. From it, she draws a light, sparkling bright and noisy. The stranger brings it to her."
+    stop music fadeout 1.0
+
+    play music "audio/room noise.mp3" fadein 0.5 fadeout 1.0
+
+    "The stranger moves to the kitchen, opening a drawer that shines brightly once opened."
+
+    scene white 
+    with slow_dissolve
+
+    "From it, she draws a light, sparkling bright and noisy. The stranger brings it to her."
 
     A "What is this?"
 
-    show lili default
-
-    play music "audio/Good Ending - Final.mp3"
+    play music "audio/Good Ending - Final.mp3" fadein 1.0
 
     "The stranger holds the light delicately and uplifts it to confused partner."
+
     "The ball of colorful light travels in the air, floating blissfully, until it reaches her and is absorbed into her skin."
-    
+
+    hide lili
+    with dissolve
+
     show color_effect
     with dissolve
 
+    window hide 
+    with slow_dissolve
+
+    $ renpy.pause(4.0, hard=True)
+    
     "The noise in her mind grows louder, rampant colors begin to pop and bubble inside of her."
+
     "Alongside them, are her memories. One by one, she recognizes and pieces it all together."
+    
     "She remembers her home, which she has spent diligently cleaning until it was unrecognizable. Even the slightest speck of dust that shone from her bedroom window drove her mad."
+    
     "She remembers work, which she dreads sitting in the plastic wrapped chair and staring at a computer for 7 hours."
     "It didn't matter if she worked, because everything she worked for was always overlooked. She was simply another worker in the many cubicles in this building."
+    
     "She remembers her lover, who has embraced her during her proudest and darkest moments. Memories bubble of her hurting her love."
+    
     "She, the monster who has done reprehensible things to her, was still held in her forgiving lover's arms."
+    
     "As she recalls, she can feel cracks of light within her, splitting and breaking the confines of her skin."
+    
     "In its remembrance she sees its beauty, and its pain, a recognition of what she is and all she tries to be."
+    
     "Has this been all she's lived for?{w=0.7} Has this been what she was trying to avoid?{w=0.7} She falls to her knees."
+    
     hide color_effect
     with vpunch
 
+    scene bg apartment
+    with slow_dissolve
+
     show lili concerned
+    with slow_dissolve
 
     B "Are you okay!?"
 
     "As her heart beats, she remembers what she tried to hide. Her light, kept within, a beam of radiance that she could not hold any longer."
+    
     "She remembers the final confrontation with her love. It was her lover's hesitant agreement to this plan, to forget who she is, to forget that part she despises."
+    
     "In both a fit of frustration, awe, and realization, she finally breaks down into sobs."
 
-    B "Hey...."
+    B "Hey..."
     A "I...."
     
     "She continues to cry and messily wipe away at her tears. How could she let herself forget? Her whole life, how could she deny it?"
 
-    show lili default
-    with hpunch
+    scene cg good end
+    with slow_fade
+
+    $ renpy.pause(3.0, hard=True)
+    pause
 
     "Her partner embraces her. She feels her partner's arms wrap around her, and the usual smell of coffee stuck to her apron."
+    
     "Her partner's messy hair tickles her neck as she moves in closer."
+    
     "She misses her, her radiance that shined even brighter than her light."
+    
     "She notices her partner is shaking even while comforting her, so she squeezes her back."
+    
     "Their hearts were connected once more by the thread of light."
 
     A "It's my fault."
@@ -136,18 +203,17 @@ label good_ending:
 
     "She notices her partner sniffles at that and holds her tighter."
 
-    show lili happy
-
-    B "Everything is going to be okay."
+    B happy "Everything is going to be okay."
     B "I'll always be here for you."
 
-    scene cg good end
-    with fade
-
     "The noise once loud and disorientating engulfs her."
+    
     "She accepts it, the pain quickly dissolving into a homeliness."
+    
     "She lets the light bubble and spark out of her skin."
+    
     "Shine pours from her veins, her skin melts away, and she lets herself be in the moment."
+    
     "Her partner, who could die by her partner's embrace, held her even tighter."
 
     A "{cps=15}I never want to forget...{/cps}"
