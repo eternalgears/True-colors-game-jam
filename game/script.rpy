@@ -104,38 +104,42 @@ label start:
     jump objects_menu
 
 label credits:
-    $ credits_speed = 25 #scrolling speed in seconds
+    $ credits_speed = 40 #scrolling speed in seconds
     scene black #replace this with a fancy background
     with dissolve
     show theend:
         yanchor 0.5 ypos 0.5
         xanchor 0.5 xpos 0.5
-    with dissolve
+    with slow_dissolve
     with Pause(3)
     hide theend
-    show cred at Move((0.5, 5.0), (0.5, 0.0), credits_speed, repeat=False, bounce=False, xanchor="center", yanchor="bottom")
+    with slow_dissolve
+
+    play music "audio/In Game Song - Final.mp3" fadein 1.0
+
+    show cred at Move((0.5, 2.8), (0.5, 0.0), credits_speed, repeat=False, bounce=False, xanchor="center", yanchor="bottom") with None
     with Pause(credits_speed)
     show thanks:
         yanchor 0.5 ypos 0.5
         xanchor 0.5 xpos 0.5
-    with dissolve
+    with slow_dissolve
     with Pause(3)
     hide thanks
+    with slow_dissolve
     return
 
 init python:
-    credits = ('Backgrounds', 'Airgoof'), ('Backgrounds', 'Dorktwerp'), ('Sprites and CG', 'Ballclown'), ('GUI', 'Cuddlywad'), ('Writing', 'Dorktwerp'), ('Writing', 'Fingerpookie'), ('Programming', 'Dorktwerp'), ('Music', 'Grumblemuck'), ('Music', 'Headwookum')
+    credits = ('Backgrounds', 'Chloe Choi'), ('CGs', 'Mazie'), ('Sprites', 'Gabriela Montante'), ('Programming', 'Jaden Nguyen'), ('Programming', 'Grace Seeberger'), ('Writing', 'Mazie'), ('Writing', 'Jaden Nguyen'), ('Music', 'Mazie'), ('SFX', 'freesound.org'), ('SFX', 'Cyrex Studios Universal UI/Menu Soundpack'), ('SFX', '{size=27}See gamepage for comprehensive list{/size}')
     credits_s = "{size=80}Credits\n\n"
     c1 = ''
     for c in credits:
         if not c1==c[0]:
-            credits_s += "\n{size=40}" + c[0] + "\n"
-        credits_s += "{size=60}" + c[1] + "\n"
+            credits_s += "\n{size=60}" + c[0] + "\n"
+        credits_s += "{size=40}" + c[1] + "\n"
         c1=c[0]
-    credits_s += "\n{size=40}Engine\n{size=60}Ren'py\n6.15.7.374" #Don't forget to set this to your Ren'py version
+    credits_s += "\n{size=60}Engine\n{size=40}Ren'py\n8.4.1" #Don't forget to set this to your Ren'py version
     
 init:
-#    image cred = Text(credits_s, font="myfont.ttf", text_align=0.5) #use this if you want to use special fonts
-    image cred = Text(credits_s, text_align=0.5)
+    image cred = Text(credits_s, font="gui/fonts/F25_Executive.otf", text_align=0.5) #use this if you want to use special fonts
     image theend = Text("{size=80}The end", text_align=0.5)
     image thanks = Text("{size=80}Thanks for Playing!", text_align=0.5)

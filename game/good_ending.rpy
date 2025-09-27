@@ -220,5 +220,5 @@ label good_ending:
     U "{cps=15}What I am...{/cps}"
 
     call credits
-    
+
     return
