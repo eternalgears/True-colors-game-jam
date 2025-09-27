@@ -27,7 +27,7 @@ label bad_ending:
     play sound "audio/keys jingle.wav"
     queue sound "audio/doorcreak.wav"
 
-    "Before she can open the door, she hears a the jangle of keys and the door creaks open."
+    "Before she can open the door, she hears the jangle of keys and the door creaks open."
 
     stop music 
 
