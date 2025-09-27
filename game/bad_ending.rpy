@@ -116,13 +116,13 @@ label bad_ending:
 
     # Resolution: The MC is denied the truth and remains in their state. Forgetting who they are and reaching normalcy.
 
+    play music "audio/Bad Ending - Final.mp3" fadein 1.5
+    
     scene cg bad end
     with dissolve 
 
     $ renpy.pause(3.0, hard=True)
     pause
-
-    play music "audio/Bad Ending - Final.mp3" fadein 1.5
 
     "As time moved forward, the two both moved on. --___ began to be herself again, from what she remembered 'herself' to be."
     
