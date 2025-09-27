@@ -5,6 +5,8 @@ label good_ending:
     "Before she can open the door, she hears the jangle of keys and the door creaks open."
 
     show lili happy
+    
+    #test test test
 
     B "{cps=50}Hey honey! I'm hoooome!!{/cps}"
 
