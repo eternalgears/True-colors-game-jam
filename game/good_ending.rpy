@@ -1,4 +1,6 @@
 label good_ending:
+    $ renpy.block_rollback()
+    
     stop music
 
     play sound "audio/knock.ogg" 

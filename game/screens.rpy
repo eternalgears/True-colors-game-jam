@@ -83,6 +83,8 @@ style frame:
 ## In-game screens
 ################################################################################
 
+screen disable_dismiss():
+    key "dismiss" action NullAction()
 
 ## Say screen ##################################################################
 ##

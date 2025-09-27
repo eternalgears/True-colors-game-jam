@@ -104,14 +104,20 @@ label start:
     jump objects_menu
 
 label credits:
+    show screen disable_dismiss
+
+    $ renpy.block_rollback()
+
     $ credits_speed = 40 #scrolling speed in seconds
+
     scene black #replace this with a fancy background
     with dissolve
+
     show theend:
         yanchor 0.5 ypos 0.5
         xanchor 0.5 xpos 0.5
     with slow_dissolve
-    with Pause(3)
+    $ renpy.pause(3.0, hard='True')
     hide theend
     with slow_dissolve
 
@@ -119,11 +125,13 @@ label credits:
 
     show cred at Move((0.5, 2.8), (0.5, 0.0), credits_speed, repeat=False, bounce=False, xanchor="center", yanchor="bottom") with None
     with Pause(credits_speed)
+    $ renpy.pause(40.0, hard='True')
+
     show thanks:
         yanchor 0.5 ypos 0.5
         xanchor 0.5 xpos 0.5
     with slow_dissolve
-    with Pause(3)
+    pause 3.0
     hide thanks
     with slow_dissolve
     return
