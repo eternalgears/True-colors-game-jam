@@ -169,7 +169,7 @@ label good_ending:
     show lili concerned
     with slow_dissolve
 
-    B "Are you okay!?"
+    L "Are you okay!?"
 
     "As her heart beats, she remembers what she tried to hide. Her light, kept within, a beam of radiance that she could not hold any longer."
     
@@ -177,8 +177,8 @@ label good_ending:
     
     "In both a fit of frustration, awe, and realization, she finally breaks down into sobs."
 
-    B "Hey..."
-    A "I...."
+    L "Hey..."
+    U "I...."
     
     "She continues to cry and messily wipe away at her tears. How could she let herself forget? Her whole life, how could she deny it?"
 
@@ -198,13 +198,13 @@ label good_ending:
     
     "Their hearts were connected once more by the thread of light."
 
-    A "It's my fault."
-    A "I'm sorry.{w} I can't believe I let this happen....."
+    U "It's my fault."
+    U "I'm sorry.{w} I can't believe I let this happen....."
 
     "She notices her partner sniffles at that and holds her tighter."
 
-    B happy "Everything is going to be okay."
-    B "I'll always be here for you."
+    L happy "Everything is going to be okay."
+    L "I'll always be here for you."
 
     "The noise once loud and disorientating engulfs her."
     
@@ -216,7 +216,9 @@ label good_ending:
     
     "Her partner, who could die by her partner's embrace, held her even tighter."
 
-    A "{cps=15}I never want to forget...{/cps}"
-    A "{cps=15}What I am...{/cps}"
+    U "{cps=15}I never want to forget...{/cps}"
+    U "{cps=15}What I am...{/cps}"
 
+    call credits
+    
     return
