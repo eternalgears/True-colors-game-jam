@@ -137,7 +137,7 @@ label credits:
     return
 
 init python:
-    credits = ('Backgrounds', 'Chloe Choi'), ('CGs', 'Mazie'), ('Sprites', 'Gabriela Montante'), ('Programming', 'Jaden Nguyen'), ('Programming', 'Grace Seeberger'), ('Writing', 'Mazie'), ('Writing', 'Jaden Nguyen'), ('Music', 'Mazie'), ('SFX', 'freesound.org'), ('SFX', 'Cyrex Studios Universal UI/Menu Soundpack'), ('SFX', '{size=27}See gamepage for comprehensive list{/size}')
+    credits = ('Backgrounds', 'Chloe Choi'), ('CGs', 'Mazie Berry'), ('Sprites', 'Gabriela Montante'), ('Programming', 'Jaden Nguyen'), ('Programming', 'Grace Seeberger'), ('Writing', 'Mazie Berry'), ('Writing', 'Jaden Nguyen'), ('Music', 'Mazie Berry'), ('SFX', 'freesound.org'), ('SFX', 'Cyrex Studios Universal UI/Menu Soundpack'), ('SFX', '{size=27}See gamepage for comprehensive list{/size}')
     credits_s = "{size=80}Credits\n\n"
     c1 = ''
     for c in credits:
