@@ -7,6 +7,8 @@
 
 define A = Character("???", color = "#ffffff", ctc = "ctc", ctc_pause = "ctc", ctc_position = "nestled")
 define B = Character("???", image = "lili", color = "#cc0000", ctc = "ctc", ctc_pause = "ctc", ctc_position = "nestled")
+define U = Character("Memory", color = "#ffffff", ctc = "ctc", ctc_pause = "ctc", ctc_position = "nestled")
+define L = Character("Her Lover", image = "lili", color = "#cc0000", ctc = "ctc", ctc_pause = "ctc", ctc_position = "nestled")
 define narrator = Character(name=None, ctc = "ctc", ctc_pause = "ctc", ctc_position = "nestled")
 
 # The game starts here.
