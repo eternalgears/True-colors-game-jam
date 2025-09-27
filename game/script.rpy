@@ -10,6 +10,9 @@ define B = Character("???")
 
 # The game starts here.
 
+# Define wave rendered images
+image color_effect = TranslateImage(Transform(WaveImage("images/color texture.png", speed = 30, amp=20, freq=65, horizontal=True, melt="wrap", sin_extreme=True),xzoom=1.5,yzoom = 1.2, nearest=True), True, False)
+
 # Default settings
 define slow_dissolve = Dissolve(1.0)
 default preferences.text_cps = 40
@@ -32,6 +35,8 @@ label start:
 
     scene bg apartment
     with vpunch
+
+    play music "audio/In Game Song - Final.mp3"
 
     "Her eyes jolt open. {w}Stabilizing herself against a wall behind her with an arm, she observes her surroundings and marks them as unfamiliar to her." 
     

@@ -16,9 +16,6 @@ label objects_menu:
     else:
         call screen object_selection
 
-    # TODO: change the xpos & ypos on each button to match the background!
-    # also, button images are placeholders, so change them :)
-
     screen object_selection:
         if not Clock:
             imagebutton:
@@ -77,7 +74,7 @@ label decide:
 
 label clock:
     $ Clock = True
-    "The clocks hands move robotically and rhythmically, reminding her of the passage of time. There is nothing unusual about its presence."
+    "The clock's hands move robotically and rhythmically, reminding her of the passage of time. There is nothing unusual about its presence."
     "For every second that ticks, she wonders to herself, how long has she been here? As the parent hand tocked, her questions stumble further."
     "The length of her stay concerns her, as she is unable to pick apart the answer from her head."
     "Furthermore, she worries if anyone is waiting for her, but deep down, she feels like nobody is coming here."
@@ -108,7 +105,8 @@ label picture:
             "The forest fluff of the oak trees rustling in the harsh wind."
             "The sand kicking up at her feet as the waves wash up at the shoreline."
             "Raising her hands towards the sky and picturing herself grasping at the clouds."
-            "She wonders who or when these pictures were made. If they are hers or if they were given to her. For such poor work to be hung, they must be cherished by someone kind."
+            "She wonders who or when these pictures were made. If they are hers or if they were given to her."
+            "For such poor work to be hung, they must be cherished by someone kind."
         "Dull":
             $ repression += 1
             "Staring deeply, she finds herself devoid of emotion in these pieces.{w} Drab. {w}Dull. {w}Nothing."
@@ -144,7 +142,7 @@ label clothes:
             "It's a satisfying image. She remembers feeling proud of their assortment, but nothing further."
         "Restricted":
             $ repression += 1
-            "Uniform. If this is her clothes, then it must be from a place that does not allow casual attire. Even worse, she wonders if she has picked these outfits herself, which she likely has."
+            "Uniform.{w=0.5} If this is her clothes, then it must be from a place that does not allow casual attire. Even worse, she wonders if she has picked these outfits herself, which she likely has."
             "She cannot remember where she works, but announces in her mind that only a stuck up person would wear such clothes. She grows frustrated in believing this is her home."
             "Her irritation pricks deeply into her skin as she stares more at the clothes."
     jump objects_menu
