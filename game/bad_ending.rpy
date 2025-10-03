@@ -144,6 +144,6 @@ label bad_ending:
     
     "She convinced herself that the buzzing feeling would not bother her. If that feeling was there from the beginning, then it may as well be apart of her life forever."
 
-    call credits 
+    call credits from _call_credits 
     
     return

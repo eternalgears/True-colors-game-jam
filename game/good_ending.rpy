@@ -221,6 +221,6 @@ label good_ending:
     U "{cps=15}I never want to forget...{/cps}"
     U "{cps=15}What I am...{/cps}"
 
-    call credits
+    call credits from _call_credits_1
 
     return

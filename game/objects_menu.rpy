@@ -103,7 +103,7 @@ label clock:
 
 label picture:
     $ Picture = True
-    "Her eyes move to an assortment of paintings and pictures. Displayed in unison are a collage of paintings and pictures."
+    "Her eyes move to an assortment of paintings and pictures."
     "Inspecting further she notes them to be photographs of scenery. Airy hills and mountains, oceans and scenic views."
     "Mixed in with the photographs lie sketches and messy paintings, amatureish at best, but for some reason still in line with the beautiful sceneries."
     menu:
